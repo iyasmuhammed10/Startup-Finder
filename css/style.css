@@ -25678,35 +25678,60 @@ Sidebar
 }
 
 
-
+/* ================================
+   TRIGGER BUTTON (OPTIONAL)
+================================ */
 .open-enquiry {
-  padding: 14px 30px;
-  font-size: 16px;
+  padding: 14px 32px;
+  background: #0b2b4c;
+  color: #fff;
+  border: none;
   cursor: pointer;
+  font-size: 16px;
 }
 
-/* OVERLAY */
+/* ================================
+   OVERLAY
+================================ */
 .enquiry-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.7);
-  display: none;
   z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease;
 }
 
-/* CARD */
+/* ACTIVE STATE */
+.enquiry-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================================
+   CARD
+================================ */
 .enquiry-card {
   width: 100%;
   height: 100%;
   background: #fff;
   display: flex;
+  transform: scale(0.96);
+  transition: transform 0.35s ease;
 }
 
-/* LEFT */
+.enquiry-overlay.active .enquiry-card {
+  transform: scale(1);
+}
+
+/* ================================
+   LEFT SIDE
+================================ */
 .enquiry-left {
   width: 45%;
-  background: #0b2b4c;
-  color: #fff;
+  background: #f7fbff;
   padding: 60px;
   display: flex;
   flex-direction: column;
@@ -25714,42 +25739,72 @@ Sidebar
 }
 
 .enquiry-left h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 58px;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
-
+.enquiry-left a:hover {
+  color: var(--theme-color-dark);
+}
 .enquiry-left p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
+  opacity: 0.9;
 }
 
 .enquiry-left img {
   margin-top: 30px;
   width: 100%;
   max-width: 380px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
-/* RIGHT */
+/* ================================
+   RIGHT SIDE
+================================ */
 .enquiry-right {
   width: 55%;
-  position: relative;
   padding: 60px;
+  position: relative;
   display: flex;
   align-items: center;
 }
 
+/* ================================
+   CLOSE BUTTON
+================================ */
 .close-btn {
   position: absolute;
   top: 25px;
   right: 25px;
-  font-size: 30px;
-  background: none;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 1rem;
+
+  background: #111;
+  color: #fff;
   border: none;
+
+  font-size: 26px;
+  font-weight: 800;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-/* FORM */
+.close-btn:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+/* ================================
+   FORM
+================================ */
 .enquiry-form {
   width: 100%;
   max-width: 420px;
@@ -25758,113 +25813,108 @@ Sidebar
 .enquiry-form h2 {
   font-size: 32px;
   margin-bottom: 25px;
+  font-weight: 600;
 }
 
+/* INPUTS */
 .enquiry-form input,
 .enquiry-form textarea {
   width: 100%;
-  padding: 14px;
+  padding: 15px;
   margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+
+  background: #f3f3f3;
+  border: 1.5px solid #d6d6d6;
+  border-radius: 8px;
+
+  font-size: 15px;
+  color: #222;
+
+  transition: all 0.25s ease;
 }
 
+/* PLACEHOLDER */
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #8a8a8a;
+  opacity: 1;
+}
+
+/* FOCUS STATE */
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  background: #f1f1f1;
+  border: 2.5px solid #c62828;
+}
+
+/* TEXTAREA */
 .enquiry-form textarea {
-  min-height: 120px;
+  min-height: 110px;
   resize: vertical;
 }
 
+/* SUBMIT BUTTON */
 .enquiry-form button {
   width: 100%;
-  padding: 15px;
+  padding: 16px;
+  margin-top: 10px;
+
   background: #0b2b4c;
   color: #fff;
   border: none;
+  border-radius: 8px;
+
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-/* MOBILE */
+.enquiry-form button:hover {
+  background: #09223b;
+}
+
+/* ================================
+   MOBILE VIEW – PROFESSIONAL
+================================ */
 @media (max-width: 768px) {
 
-  /* CARD STACK */
   .enquiry-card {
     flex-direction: column;
     height: 100vh;
     overflow-y: auto;
   }
 
-  /* LEFT SECTION (HERO STYLE) */
   .enquiry-left {
     width: 100%;
     padding: 45px 25px 35px;
-    text-align: center;
-    align-items: center;
   }
 
   .enquiry-left h1 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    font-size: 40px;
   }
 
   .enquiry-left p {
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.9;
+    font-size: 19px;
     max-width: 320px;
   }
 
   .enquiry-left img {
-    margin-top: 20px;
-    max-width: 260px;
-    border-radius: 14px;
+    display: none;
   }
 
-  /* RIGHT SECTION */
   .enquiry-right {
     width: 100%;
     padding: 35px 22px 45px;
-    background: #fff;
     align-items: flex-start;
   }
 
-  /* CLOSE BUTTON (BETTER TOUCH TARGET) */
   .close-btn {
     top: 15px;
     right: 15px;
-    font-size: 26px;
-    padding: 6px 12px;
-  }
-
-  /* FORM */
-  .enquiry-form {
-    max-width: 100%;
   }
 
   .enquiry-form h2 {
     font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-
-  .enquiry-form input,
-  .enquiry-form textarea {
-    padding: 15px;
-    font-size: 15px;
-    border-radius: 8px;
-  }
-
-  .enquiry-form textarea {
-    min-height: 100px;
-  }
-
-  /* BUTTON – APP STYLE */
-  .enquiry-form button {
-    padding: 16px;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 10px;
   }
 }
-
