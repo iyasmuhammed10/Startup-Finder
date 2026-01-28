@@ -425,7 +425,7 @@
           your dream.</p>
 
         <div class="hero-actions">
-          <button class="btn light" onclick="openEnquiry()">Start Your Business</button>
+          <button class="btn light" onclick="openEnquiryPopup()">Start Your Business</button>
           <a class="btn dark" href="tel:+971555681682">Free Call</a>
         </div>
       </div>
@@ -513,15 +513,6 @@
   <div class="date-strip" id="dateStrip"></div>
 
   <button class="schedule-btn">Schedule meeting <span>›</span></button>
-</div>
-
-<!-- MODAL -->
-<div class="date-modal" id="dateModal">
-  <div class="modal-box">
-    <h4>Selected Date</h4>
-    <p id="selectedDateText"></p>
-    <button onclick="closeModal()">Close</button>
-  </div>
 </div>
 
               </div>
@@ -1369,22 +1360,7 @@
  
 
 
-      <div class="footer-bottom style">
-        <div class="auto-container">
-          <div class="inner-container">
-            <div class="copyright-text">© Copyright 2025 by kodesolution.com</div>
-            <ul class="footer-nav">
-              <li>Features</li>
-              <li>Pricing Plan</li>
-              <li>Best Program</li>
-              <li>Press Kit</li>
-            </ul>
-
-            <div class="scroll-up-two scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </footer>
     <!-- End Main Footer -->
 
@@ -1396,8 +1372,10 @@
 
     <!-- LEFT SIDE -->
     <div class="enquiry-left">
-      <h1>Let’s Talk</h1>
-      <p>Tell us about your requirement and we’ll get back to you shortly.</p>
+      <h1>Let’s Schedule Your Call</h1>
+      <p>Your consultation is scheduled for <strong id="selectedDateText"></strong>. We look forward to our discussion. </p>
+<a href="#" onclick="openDatePicker(event)">Click here to change date</a>
+
       <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
            alt="Enquiry" />
     </div>
@@ -1405,7 +1383,7 @@
     <!-- RIGHT SIDE -->
     <div class="enquiry-right">
       <button class="close-btn" onclick="closeEnquiry()">×</button>
-
+      
       <form class="enquiry-form">
         <h2>Send Enquiry</h2>
 
@@ -1413,9 +1391,7 @@
         <input type="email" placeholder="Email Address" required>
         <input type="tel" placeholder="Phone Number">
         <input type="text" placeholder="Service Required">
-
-        <textarea placeholder="Message"></textarea>
-
+        <input type="text" id="selectedDateInput" name="schedule_date">
         <button type="submit">Submit Enquiry</button>
       </form>
     </div>
