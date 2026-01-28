@@ -1646,9 +1646,12 @@ track.addEventListener("mouseleave", () => {
   currentSpeed = speed;
 });
 
+
+
+
 const dateStrip = document.getElementById("dateStrip");
-const modal = document.getElementById("dateModal");
 const dateText = document.getElementById("selectedDateText");
+const dateInput = document.getElementById("selectedDateInput");
 
 const days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 const today = new Date();
@@ -1671,27 +1674,57 @@ for (let i = 0; i < 7; i++) {
   dateStrip.appendChild(div);
 }
 
-/* SELECT DATE */
+/* FORMAT DATE FOR DISPLAY */
+function formatDate(dateObj) {
+  return dateObj.toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+let selectedDate = null;
+function formatDate(dateObj) {
+  return dateObj.toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
 function selectDate(el, dateObj) {
   document.querySelectorAll(".date").forEach(d => d.classList.remove("active"));
   el.classList.add("active");
 
-  const formatted = dateObj.toDateString();
-  dateText.textContent = formatted;
+  selectedDate = dateObj;
 
-  modal.style.display = "flex";
+  openEnquiryPopup();
 }
+const popup = document.getElementById("enquiryPopup");
 
-/* CLOSE MODAL */
-function closeModal() {
-  modal.style.display = "none";
-}
+function openEnquiryPopup() {
 
+  // 🔥 IF DATE NOT SET → USE TODAY
+  if (!selectedDate) {
+    selectedDate = new Date();
+  }
 
-function openEnquiry() {
-  document.getElementById("enquiryPopup").style.display = "block";
+  // SET UI + INPUT
+  dateText.textContent = formatDate(selectedDate);
+  dateInput.value = selectedDate.toISOString().split("T")[0];
+
+  // OPEN POPUP
+  popup.style.display = "block";
+  setTimeout(() => popup.classList.add("active"), 10);
 }
 
 function closeEnquiry() {
-  document.getElementById("enquiryPopup").style.display = "none";
+  popup.classList.remove("active");
+
+  // 🔥 RESET SELECTED DATE
+  selectedDate = null;
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 350);
 }
+
