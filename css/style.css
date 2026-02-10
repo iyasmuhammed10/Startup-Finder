@@ -9210,10 +9210,11 @@ banner-section-h2
   position: relative;
 }
 .about-section-h2 .image-column .inner-column .image img {
-  -webkit-mask-image: url(../images/icons/about-h2-1.png);
   -webkit-mask-size: contain;
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
+  width: 100%;
+  border-radius: 1rem;
 }
 .about-section-h2 .image-column .inner-column .icon {
   position: absolute;
@@ -25773,7 +25774,7 @@ Sidebar
 /* ================================
    CLOSE BUTTON
 ================================ */
-.close-btn {
+.enq-close-btn {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -25797,7 +25798,7 @@ Sidebar
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.close-btn:hover {
+.enq-close-btn:hover {
   background: #000;
   transform: scale(1.05);
 }
@@ -25909,12 +25910,73 @@ Sidebar
     align-items: flex-start;
   }
 
-  .close-btn {
+  .enq-close-btn {
     top: 15px;
     right: 15px;
   }
 
   .enquiry-form h2 {
     font-size: 24px;
+  }
+}
+
+.serv-p{
+  font-size: 20px;
+}
+
+.points{
+  margin-left: 5px;
+  line-height: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+
+
+.client-logos-bt {
+  background: #f9fafb;
+}
+
+.logo-box-bt {
+  background: #ffffff;
+  padding: 25px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.logo-box-bt img {
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 0.75;
+  transition: all 0.35s ease;
+}
+
+/* Hover effect */
+.logo-box-bt:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.logo-box-bt:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Mobile tuning */
+@media (max-width: 576px) {
+  .logo-box-bt {
+    height: 90px;
+    padding: 15px;
+  }
+
+  .logo-box-bt img {
+    max-height: 45px;
   }
 }
