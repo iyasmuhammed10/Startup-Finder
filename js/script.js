@@ -1649,9 +1649,16 @@ track.addEventListener("mouseleave", () => {
 
 
 
+var selectedDate = null;
+
 const dateStrip = document.getElementById("dateStrip");
-const dateText = document.getElementById("selectedDateText");
-const dateInput = document.getElementById("selectedDateInput");
+function getDateEls() {
+  return {
+    dateText: document.getElementById("selectedDateText"),
+    dateInput: document.getElementById("selectedDateInput")
+  };
+}
+
 
 const days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 const today = new Date();
@@ -1683,7 +1690,6 @@ function formatDate(dateObj) {
   });
 }
 
-let selectedDate = null;
 function formatDate(dateObj) {
   return dateObj.toLocaleDateString("en-IN", {
     day: "numeric",
@@ -1699,32 +1705,49 @@ function selectDate(el, dateObj) {
 
   openEnquiryPopup();
 }
-const popup = document.getElementById("enquiryPopup");
+function getPopup() {
+  return document.getElementById("enquiryPopup");
+}
+
 
 function openEnquiryPopup() {
 
-  // 🔥 IF DATE NOT SET → USE TODAY
-  if (!selectedDate) {
-    selectedDate = new Date();
-  }
+// 🔥 IF DATE NOT SET OR INVALID → USE TODAY
+if (!selectedDate || isNaN(new Date(selectedDate).getTime())) {
+  selectedDate = new Date();
+  window.selectedDate = selectedDate;
+}
+
 
   // SET UI + INPUT
-  dateText.textContent = formatDate(selectedDate);
-  dateInput.value = selectedDate.toISOString().split("T")[0];
+ const { dateText, dateInput } = getDateEls();
+if (!dateText || !dateInput) return; // DOM not ready or not on page
+
+dateText.textContent = formatDate(selectedDate);
+dateInput.value = selectedDate.toISOString().split("T")[0];
+
 
   // OPEN POPUP
-  popup.style.display = "block";
-  setTimeout(() => popup.classList.add("active"), 10);
+const popup = getPopup();
+if (!popup) return;
+
+popup.style.display = "block";
+setTimeout(() => popup.classList.add("active"), 10);
+
 }
 
 function closeEnquiry() {
-  popup.classList.remove("active");
+  const popup = getPopup();
+if (!popup) return;
+
+selectedDate = null;
+popup.classList.remove("active");
+
+setTimeout(() => {
+  popup.style.display = "none";
+}, 350);
 
   // 🔥 RESET SELECTED DATE
-  selectedDate = null;
 
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 350);
 }
 
