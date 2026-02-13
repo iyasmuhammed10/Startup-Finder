@@ -19406,6 +19406,7 @@ Testimonial Section
   position: relative;
   padding-top: 0px;
   overflow: hidden;
+  padding-bottom: 80px;
 }
 @media only screen and (max-width: 1699px) {
   .footer-style-one {
@@ -19421,6 +19422,7 @@ Testimonial Section
 @media (max-width: 991.98px) {
   .footer-style-one {
     padding: 0;
+    padding-bottom: 70px;
   }
 }
 .footer-style-one:before {
