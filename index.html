@@ -12,6 +12,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/style-home-1.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
@@ -85,7 +86,7 @@
                   <nav class="nav main-menu">
                     <ul class="navigation">
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Licensing
                         </a>
 
@@ -117,7 +118,8 @@
                         </div>
                       </li>
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Services
                         </a>
 
@@ -149,7 +151,7 @@
                         </div>
                       </li>
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Workspace
                         </a>
 
@@ -181,7 +183,7 @@
                         </div>
                       </li>
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Visa
                         </a>
 
@@ -216,7 +218,7 @@
                         </div>
                       </li>
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Company
                         </a>
 
@@ -240,7 +242,7 @@
                         </div>
                       </li>
                       <li class="dropdown mega-dropdown">
-                        <a class="mega-trigger">
+                        <a class="mega-trigger" style="color: #ffffff;">
                           Accounting
                         </a>
 
@@ -345,9 +347,9 @@
                   <div class="action-box">
                     <a href="tel:+971555681682" class="header-phone_box">
                       <span class="icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
-                      <span class="info">
+                      <span class="info" style="color: #ffffff;">
                         Call Anytime
-                        <strong>+971 555 681 682</strong>
+                        <strong style="color: #ffffff;">+971 555 681 682</strong>
                       </span>
                     </a>
                   </div>
@@ -409,37 +411,58 @@
 
     </header>
     <!--End Main Header -->
+  <div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    
+    <button class="close-p-btn" onclick="closePopup()">×</button>
+
+    <h4>Looking to Setup a Business in the UAE?</h4>
+    <p>Get a Call Back within 1 Minute</p>
+
+    <form>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number</label>
+      <input  id="phone" type="tel" placeholder="Enter phone number" required>
+
+      <button style="margin-top: 20px !important;" type="submit" class="call-btn">Call Me</button>
+
+    </form>
+
+  </div>
+</div>
 
     <!-- Start banner-section-h1 -->
 
-    <section class="hero container ">
-      <div class="hero-left">
-        <p class="hero-tag">10+ Years of Making Entrepreneurial Dreams a Reality</p>
+    <section class="hero ">
+      <div class="container">
 
-        <h1>
-          From <br>Employee <br>To Entrepreneur
-        </h1>
-
-        <p class="hero-line">We handle company registration, licenses, GST & compliance — so you can focus on building
-          your dream.</p>
-
-        <div class="hero-actions">
+        <div class="hero-left">
+          <p class="hero-tag" style="color: #ffffff;">10+ Years of Making Entrepreneurial Dreams a Reality</p>
+          
+          <h1 >
+            From <br>Employee <br>To Entrepreneur
+          </h1>
+          
+          <p class="hero-line" style="color: #ffffff;">We handle company registration, licenses, GST & compliance — so you can focus on building
+            your dream.</p>
+            
+            <div class="hero-actions">
           <button class="btn light" onclick="openEnquiryPopup()">Start Your Business</button>
           <a class="btn dark" href="tel:+971555681682">Free Call</a>
         </div>
       </div>
-
-      <div class="hero-right">
-        <img src="images/banner/pexels-fauxels-3184405.jpg" class="hero-person" alt="Entrepreneur">
-
-        <div class="badge b1">✔ License Approved</div>
-        <div class="badge b2">✔ Bank Account Opened</div>
-        <div class="badge b3">✔ Visa Issued</div>
-      </div>
-
+      
+      
       <div class="slide">
-
+        
       </div>
+    </div>
     </section>
 
     <!-- End banner-section-h1 -->
@@ -745,6 +768,95 @@
     <!-- End project section h2 -->
 
 
+<section class="assist-section">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="assist-title">We <span>Assist</span> Your Business Growth</h2>
+      <p class="text-muted">Complete UAE business setup and support services</p>
+    </div>
+
+    <!-- Services -->
+    <div class="row g-4">
+
+      <!-- Column 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+           <li><i class="bi bi-file-earmark-check text-danger me-2"></i>UAE Trade License Services</li>
+
+<li><i class="bi bi-building text-danger me-2"></i>Dubai Mainland Company</li>
+
+<li><i class="bi bi-globe text-danger me-2"></i>Free Zone / Offshore Company Formation</li>
+
+<li><i class="bi bi-briefcase-fill text-danger me-2"></i>Business Consulting Services</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+          <li><i class="bi bi-passport-fill text-danger me-2"></i>International Visa Services</li>
+
+<li><i class="bi bi-award text-danger me-2"></i>Golden Visa / 10 Year Visa</li>
+
+<li><i class="bi bi-person-badge text-danger me-2"></i>Investor / Employment Visa</li>
+
+<li><i class="bi bi-people text-danger me-2"></i>Family Visa</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+            <li><i class="bi bi-receipt text-danger me-2"></i>VAT Registration</li>
+
+<li><i class="bi bi-arrow-repeat text-danger me-2"></i>License Renewal & Amendments</li>
+
+<li><i class="bi bi-patch-check text-danger me-2"></i>Certificate Attestation</li>
+
+<li><i class="bi bi-shield-check text-danger me-2"></i>Brand Protection Services</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="assist-card">
+          <ul>
+           <li><i class="bi bi-door-open text-danger me-2"></i>Office / Virtual Spaces</li>
+
+<li><i class="bi bi-people-fill text-danger me-2"></i>Corporate PRO Services</li>
+
+<li><i class="bi bi-bank text-danger me-2"></i>Corporate Bank Account Opening</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 5 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="assist-card">
+          <ul>
+           <li><i class="bi bi-x-circle text-danger me-2"></i>Company Liquidation</li>
+
+<li><i class="bi bi-shield-plus text-danger me-2"></i>Insurance</li>
+
+<li><i class="bi bi-keyboard text-danger me-2"></i>Medical / ID Typing</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
     <!-- funfact-area-start -->
     <section class="ks-funfact-area ks-funfact-mlr home2-style">
       <div class="outer-box">
@@ -828,7 +940,7 @@
                         </svg>
                       </span>
                       <h5 class="ks-funfact-number"><i class="purecounter" data-purecounter-duration="1"
-                          data-purecounter-end="5">0</i>+</h5>
+                          data-purecounter-end="31">0</i>+</h5>
                     </div>
                     <span>Countries Served</span>
                   </div>
@@ -1122,7 +1234,7 @@
           <div class="row align-items-center">
             <div class="sec-title-h1 text-center">
               <h6 class="sub-title wow fadeInUp">Proudly associated with</h6>
-              <h2 class="title wow fadeInUp" data-wow-delay="400ms">Leading Conglomerates</h2>
+              <h2 class="title wow fadeInUp" data-wow-delay="400ms">Associated with Government Entities</h2>
             </div>
           </div>
         </div>
@@ -1216,7 +1328,7 @@
                   </div>
                   <div class="info">
                     <div class="icon"><i class="fa-regular fa-location-dot" style="color: #ffffff;"></i></div>
-                    <div class="text">Aspin tower 29th floor, <br> Sheik Zayed Road, Dubai</div>
+                    <div class="text">Aspin Commercial Tower, <br> Sheik Zayed Road, Dubai</div>
                   </div>
                 </div>
               </div>
@@ -1269,179 +1381,105 @@
     </section>
     <!-- end contact-section-h3 -->
 
+
+    <!-- Free Zone Partners Section -->
+<section class="freezone-section py-5 text-center">
+  <div class="container">
+    
+    <h2 class="fw-bold mb-3">
+      Trusted Free Zone Authorities Across the UAE
+    </h2>
+    
+    <p class="text-muted mb-4">
+      We collaborate with top UAE free zones to simplify your business setup journey.
+    </p>
+
+    <div class="freezone-logos">
+      <img src="images/government-logos/Firefly.jpg" alt="UAE Free Zone Logos" class="img-fluid">
+    </div>
+
+  </div>
+</section>
+
+
     <!-- testimonial-area-start -->
-    <div class="ks-testimonial-area">
-      <div class="outer-box">
-        <div class="ks-testimonial-top-wrap">
-          <div class="row align-items-center">
-            <div class="sec-title-h1 text-center">
-              <h6 class="sub-title wow fadeInUp">testimonials</h6>
-              <h2 class="title wow fadeInUp" data-wow-delay="400ms">What They’re Talking <br>About Us?</h2>
+<section class="reviews-section py-5">
+  <div class="container text-center">
+    
+    <h2 class="fw-bold mb-2">Trusted by Entrepreneurs in Dubai</h2>
+    <p class="text-muted mb-5">Real experiences from our clients at Startup Finder</p>
+
+    <div class="row g-4">
+
+      <!-- Review Card -->
+      <div class="col-md-4">
+        <div class="review-card p-4 text-start position-relative">
+
+          <!-- Google Logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+               class="google-logo">
+
+          <div class="d-flex align-items-center mb-3">
+            <div class="avatar">A</div>
+            <div class="ms-3">
+              <h6 class="mb-0">Ahmed Khan</h6>
+              <small class="text-muted">Business Owner</small>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="ks-testimonial-wrap">
-              <div class="ks-testimonial-item d-flex"> <img class="ks-testimonial-shape-1"
-                  src="images/icons/testimonial-1-1.png" alt="">
-                <div class="swiper ks-testimonial-active pb-0">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="ks-testimonial-content"> <span class="quote d-block">
-                          <svg width="60" height="60" viewBox="0 0 83 59" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M0.0117188 35.1428H17.5831L5.86876 58.5713H23.4402L35.1545 35.1428V0H0.0117188V35.1428Z"
-                              fill="#ed1b24" />
-                            <path d="M46.8691 0V35.1428H64.4405L52.7262 58.5713H70.2976L82.012 35.1428V0H46.8691Z"
-                              fill="#ed1b24" />
-                          </svg>
-                        </span>
-                        <div class="ratting"> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> </div>
-                        <p> Startup Finder made the entire company setup process smooth and stress-free. Their team handled everything from licensing to visas with complete transparency. I was impressed by their speed, professionalism, and constant updates. I highly recommend them to anyone starting a business in the UAE.</p>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ks-testimonial-content"> <span class="quote d-block">
-                          <svg width="60" height="60" viewBox="0 0 83 59" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M0.0117188 35.1428H17.5831L5.86876 58.5713H23.4402L35.1545 35.1428V0H0.0117188V35.1428Z"
-                              fill="#ed1b24" />
-                            <path d="M46.8691 0V35.1428H64.4405L52.7262 58.5713H70.2976L82.012 35.1428V0H46.8691Z"
-                              fill="#ed1b24" />
-                          </svg>
-                        </span>
-                        <div class="ratting"> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> <i>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M17.7161 7.59371L13.8542 11.3887L14.7662 16.7487C14.8059 16.9831 14.7104 17.22 14.5194 17.36C14.4116 17.4393 14.2832 17.4793 14.1549 17.4793C14.0563 17.4793 13.9571 17.4556 13.8666 17.4075L9.09136 14.8768L4.31675 17.4068C4.10843 17.5181 3.85485 17.5 3.66389 17.3593C3.47293 17.2193 3.37746 16.9825 3.41714 16.7481L4.32915 11.3881L0.466566 7.59371C0.297926 7.42746 0.236546 7.17871 0.309706 6.95309C0.382866 6.72746 0.576925 6.56184 0.810665 6.52746L6.14823 5.74621L8.53522 0.869961C8.74416 0.443086 9.43855 0.443086 9.64749 0.869961L12.0345 5.74621L17.372 6.52746C17.6058 6.56184 17.7998 6.72684 17.873 6.95309C17.9462 7.17934 17.8848 7.42684 17.7161 7.59371Z"
-                                fill="#222429" />
-                            </svg>
-                          </i> </div>
-                        <p>I was confused about where to begin, but Startup Finder guided me at every step. They explained everything clearly, helped me choose the right license, and even assisted with my bank account and compliance. Thanks to their support, my business is running successfully today.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="ks-testimonial-thumb"> <img src="images/resource/thumb-1-1.jpg" alt="">
-                  <div class="ks-testimonial-thumb-sm"> <img src="images/resource/thumb-1-2.jpg" alt=""> </div>
-                </div>
-              </div>
-              <div class="ks-testimonial-bottom">
-                <div class="row align-items-center">
-                  <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
-                    <div class="swiper ks-testi-author-active pb-0">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="ks-testimonial-user-wrap d-flex align-items-center">
-                            <div class="thumb"> <img src="images/icons/gray-user-profile-icon-png-fP8Q1P.png" alt=""> </div>
-                            <div class="ks-testimonial-user-info">
-                              <h4 class="title">David Smith</h4>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="ks-testimonial-user-wrap d-flex align-items-center">
-                            <div class="thumb"> <img src="images/icons/gray-user-profile-icon-png-fP8Q1P.png" alt=""> </div>
-                            <div class="ks-testimonial-user-info">
-                              <h4 class="title">Burgund Flemming</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-xl-7 col-md-5 col-sm-6">
-                    <div class="ks-testimonial-navigation align-items-center">
-                      <button class="arrow-prev">
-                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M18.0714 7.7167L4.63112 7.71661L9.01907 12.1046L7.66778 13.4559L0.973023 6.76111L7.66778 0.0663526L9.01908 1.41765L4.63114  5.80559L18.0714 5.80552L18.0714 7.7167Z"
-                            fill="#FFFFFF" />
-                        </svg>
-                      </button>
-                      <button class="arrow-next">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0.713769 6.2833L14.154 6.28339L9.76608 1.89543L11.1174 0.544136L17.8121 7.23889L11.1174 13.9336L9.76608 12.5824L14.154  8.19441L0.713769 8.19448L0.713769 6.2833Z"
-                            fill="#FFFFFF" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <div class="stars mb-2">★★★★★</div>
+
+          <p class="review-text">
+            Startup Finder made the entire company setup process smooth and stress-free. Their team handled everything professionally.
+          </p>
         </div>
       </div>
+
+      <!-- Copy same structure for other reviews -->
+
+      <div class="col-md-4">
+        <div class="review-card p-4 text-start position-relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo">
+
+          <div class="d-flex align-items-center mb-3">
+            <div class="avatar">S</div>
+            <div class="ms-3">
+              <h6 class="mb-0">Sarah Ali</h6>
+              <small class="text-muted">Entrepreneur</small>
+            </div>
+          </div>
+
+          <div class="stars mb-2">★★★★★</div>
+
+          <p class="review-text">
+            Very reliable service. They guided me through every step and delivered on time without any confusion.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="review-card p-4 text-start position-relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo">
+
+          <div class="d-flex align-items-center mb-3">
+            <div class="avatar">R</div>
+            <div class="ms-3">
+              <h6 class="mb-0">Rohit Mehta</h6>
+              <small class="text-muted">Startup Founder</small>
+            </div>
+          </div>
+
+          <div class="stars mb-2">★★★★★</div>
+
+          <p class="review-text">
+            Highly professional team. They saved me a lot of time and effort in setting up my business in UAE.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
     <!-- testimonial-area-end -->
 
     <!-- Main Footer -->
@@ -1517,7 +1555,7 @@
                   <div class="footer-widget newsletter-widget">
                     <h4 class="widget-title style">Contact</h4>
                     <ul class="list-style-five">
-                      <li><i class="fas fa-map-marker-alt"></i><span><span>29th floor, Aspin Tower, <br>Sheik Zayed
+                      <li><i class="fas fa-map-marker-alt"></i><span><span>Aspin Commercial Tower, <br>Sheik Zayed
                             Road, Dubai</span></span></li>
                       <li><i class="far fa-envelope"></i><span><a href="mailto:startupfinderuae@gmail.com"
                             class="__cf_email__">startupfinderuae@gmail.com</a></span></li>
@@ -1597,7 +1635,18 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 
+<script>
+  const input = document.querySelector("#phone");
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: "ae",
+    separateDialCode: true,
+    preferredCountries: ["ae", "in", "us"],
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
+  });
+</script>
   <script src="js/jquery.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
