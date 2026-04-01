@@ -1751,3 +1751,13 @@ setTimeout(() => {
 
 }
 
+window.onload = function () {
+    setTimeout(() => {
+      document.getElementById("popup").style.display = "flex";
+    }, 1500); // delay (1.5 sec)
+  };
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
