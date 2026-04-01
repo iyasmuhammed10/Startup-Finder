@@ -5006,11 +5006,12 @@ Main Header
   width: 25px;
 }
 [data-tm-layout=dark] .header-style-one .mobile-nav-toggler span {
-  background-color: var(--headings-color);
+  background-color: #ffffff;
+
 }
 @media (max-width: 767.98px) {
   .header-style-one .mobile-nav-toggler span {
-    background-color: var(--theme-color-dark);
+    background-color: var(--theme-color-white);
   }
 }
 .header-style-one .mobile-nav-toggler span:not(:last-child) {
@@ -25003,8 +25004,22 @@ Sidebar
 .hero-left h1 {
   font-size: 82px;
   line-height: 1.1;
-  color: var(--theme-color1);
-  font-weight: 550;
+  color: #ffffff;
+  font-weight: 650;
+}
+/* Overlay layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Content should be ABOVE overlay */
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-tag{
@@ -25025,7 +25040,7 @@ Sidebar
 }
 
 .btn.light { background:#cfefff; }
-.btn.dark { background:#1e2235; color:#fff; }
+.btn.dark { background:var(--theme-color1); color:#fff; }
 
 /* Mobile layout fix */
 @media (max-width: 992px) {
@@ -25404,6 +25419,7 @@ Sidebar
 
   .hero-line{
     font-size: 16px;
+    font-weight: 550;
     line-height: 24px;
   }
 
@@ -25981,4 +25997,220 @@ Sidebar
   .logo-box-bt img {
     max-height: 45px;
   }
+}
+
+
+    .assist-section {
+      padding: 60px 0;
+      background: #f9fafc;
+      margin-bottom: 3rem;
+    }
+
+    .assist-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .assist-title span {
+      color: #e53935;
+    }
+
+    .assist-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .assist-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .assist-card ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .assist-card li {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    @media (max-width: 768px) {
+      .assist-title {
+        font-size: 1.8rem;
+      }
+    }
+
+
+    .hero {
+  background: url('../images/banner/bulletrain743-dubai-1767540.jpg') center/cover no-repeat;
+ position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-top: -450px;
+  padding-top: 220px;
+  margin-bottom: 280px;
+
+}
+
+.navbar {
+  position: absolute; /* or fixed */
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent; /* important */
+}
+
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Box */
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Close button */
+.close-p-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Inputs */
+.popup-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.popup-box label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Button */
+.call-btn {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.freezone-section {
+  background: #f8f9fa;
+}
+
+.freezone-section h2 {
+  font-size: 32px;
+}
+
+.freezone-section p {
+  font-size: 16px;
+}
+
+.freezone-logos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.freezone-logos img:hover {
+  transform: scale(1.03);
+}
+
+
+.reviews-section {
+  background: #f8f9fa;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Google logo */
+.google-logo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  opacity: 0.7;
+}
+
+/* Avatar with orange background */
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: #ff7a00; /* clean orange */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.stars {
+  color: #fbbc04;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #555;
 }
