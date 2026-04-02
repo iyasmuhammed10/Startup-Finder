@@ -26213,11 +26213,7 @@ Sidebar
 .review-text {
   font-size: 14px;
   color: #555;
-}
-
-.reviews-section {
-  background: #f8f9fa;
-}
+}}
 
 .review-card {
   background: #fff;
@@ -26230,10 +26226,21 @@ Sidebar
   transform: translateY(-5px);
 }
 
+/* Google logo */
+.google-logo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  opacity: 0.7;
+}
+
+/* Avatar with orange background */
 .avatar {
   width: 45px;
   height: 45px;
-  background: #e0e0e0;
+  background: #ff7a00; /* clean orange */
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -26242,7 +26249,7 @@ Sidebar
 }
 
 .stars {
-  color: #fbbc04; /* Google yellow */
+  color: #fbbc04;
   font-size: 18px;
   letter-spacing: 2px;
 }
