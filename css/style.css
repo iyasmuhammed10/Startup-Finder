@@ -26290,3 +26290,23 @@ body, html {
     color: #000;
 }
 
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+
+
+.carousel-inner {
+    height: 100vh;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+
+
