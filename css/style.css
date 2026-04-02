@@ -25261,9 +25261,6 @@ Sidebar
   will-change: transform;
 }
 
-.slide {
-  margin: 15px;
-}
 .poster {
   margin: 15px;
 }
@@ -26185,7 +26182,11 @@ Sidebar
 .carousel,
 .carousel-inner,
 .carousel-item {
-    height: 100vh;
+    height: 100%;
+	padding: 15px;
+	padding-top: 80px;
+	margin-top: -120px;
+	
 }
 
 .carousel-item {
