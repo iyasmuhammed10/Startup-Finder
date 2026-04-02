@@ -26182,7 +26182,7 @@ Sidebar
 .carousel,
 .carousel-inner,
 .carousel-item {
-    height: 100%;
+    height: 85vh;
 	padding-bottom: 20px;
 	padding-top: 80px;
 	margin-top: -120px;
