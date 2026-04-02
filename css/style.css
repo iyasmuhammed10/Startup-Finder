@@ -26166,95 +26166,129 @@ Sidebar
   transform: scale(1.03);
 }
 
-
-.reviews-section {
-  background: #f8f9fa;
+/* === NAVBAR (TRANSPARENT → SOLID) === */
+.new-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+    background: transparent;
 }
 
-.review-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: 0.3s;
+.new-navbar.scrolled {
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-.review-card:hover {
-  transform: translateY(-5px);
+/* === SECTION BASE === */
+.new-carousel-wrapper {
+    position: relative;
 }
 
-/* Google logo */
-.google-logo {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 50px;
-  opacity: 0.7;
+.new-carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
 }
 
-/* Avatar with orange background */
-.avatar {
-  width: 45px;
-  height: 45px;
-  background: #ff7a00; /* clean orange */
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.new-carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-.stars {
-  color: #fbbc04;
-  font-size: 18px;
-  letter-spacing: 2px;
+.new-carousel-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 8s ease;
 }
 
-.review-text {
-  font-size: 14px;
-  color: #555;
-}}
-
-.review-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: 0.3s;
+.carousel-item.active .new-carousel-bg {
+    transform: scale(1.08);
 }
 
-.review-card:hover {
-  transform: translateY(-5px);
+/* === CONTENT === */
+.new-carousel-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
 }
 
-/* Google logo */
-.google-logo {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 50px;
-  opacity: 0.7;
+.new-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    font-size: 13px;
+    backdrop-filter: blur(6px);
+    margin-bottom: 15px;
 }
 
-/* Avatar with orange background */
-.avatar {
-  width: 45px;
-  height: 45px;
-  background: #ff7a00; /* clean orange */
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.new-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
-.stars {
-  color: #fbbc04;
-  font-size: 18px;
-  letter-spacing: 2px;
+.new-tagline {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
-.review-text {
-  font-size: 14px;
-  color: #555;
+.new-proof {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* === BUTTONS === */
+.new-btn-wrap {
+    display: flex;
+    gap: 15px;
+}
+
+.new-btn-primary {
+    background: #ff7a00;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.new-btn-primary:hover {
+    background: #e66900;
+}
+
+.new-btn-outline {
+    border: 2px solid #fff;
+    padding: 12px 26px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.new-btn-outline:hover {
+    background: #fff;
+    color: #000;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
