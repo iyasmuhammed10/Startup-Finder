@@ -26214,3 +26214,40 @@ Sidebar
   font-size: 14px;
   color: #555;
 }
+
+.reviews-section {
+  background: #f8f9fa;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.stars {
+  color: #fbbc04; /* Google yellow */
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #555;
+}
