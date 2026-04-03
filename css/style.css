@@ -25132,7 +25132,7 @@ Sidebar
 
 .badge {
   background: #ffe5ea;
-  color: #d90429;
+  color: #ed1b24;
   padding: 8px 16px;
   border-radius: 20px;
   width: fit-content;
@@ -26267,7 +26267,7 @@ Sidebar
     border-radius:8px;
 }
 
-.trust-box i { color:#ff2b2b; }
+.trust-box i { color:#ed1b24; font-size:20px; }
 
 /* BUTTONS  Iyas*/
 .btn-wrap {
@@ -26276,7 +26276,7 @@ Sidebar
 }
 
 .btn-main {
-    background:#ff2b2b;
+    background:#ed1b24;
     color:#fff;
     padding:12px 24px;
     border-radius:8px;
