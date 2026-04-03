@@ -26275,6 +26275,10 @@ Sidebar
     gap:12px;
 }
 
+.red{
+  color:#ed1b24;
+}
+
 .btn-main {
     background:#ed1b24;
     color:#fff;
