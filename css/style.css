@@ -26319,48 +26319,7 @@ Sidebar
 .carousel-fade .carousel-item { opacity:0; }
 .carousel-fade .carousel-item.active { opacity:1; }
 
-.carousel-bg {
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    z-index:1;
-    transition: transform 6s ease;
-}
 
-.carousel-item.active .carousel-bg { transform: scale(1.05); }
-
-.carousel-item::before {
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
-    z-index:2;
-}
-
-/* CENTER CONTENT */
-.carousel-content {
-    position:relative;
-    z-index:3;
-    color:#fff;
-    max-width:650px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    height:85vh;
-}
-
-.badge-custom {
-    background: rgba(255,255,255,0.15);
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    margin-bottom:18px;
-    width:fit-content;
-}
-
-.title {
 /* ===== PREMIUM SLIDE ===== */
 
 .premium-slide {
@@ -26368,6 +26327,7 @@ Sidebar
     height: 85vh;
     color: #fff;
     overflow: hidden;
+	
 }
 
 /* BACKGROUND */
