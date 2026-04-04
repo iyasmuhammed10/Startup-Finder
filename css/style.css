@@ -26205,7 +26205,20 @@ Sidebar
     transition: transform 3s ease;
 }
 
+.carousel-bg-mob {
+  
+  
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    z-index:1;
+    transition: transform 3s ease;
+}
+
 .carousel-item.active .carousel-bg { transform: scale(1.05); }
+
+.carousel-item.active .carousel-bg-mob { transform: scale(1.05); }
 
 .carousel-item::before {
     content:"";
@@ -26414,3 +26427,22 @@ Sidebar
   color: #555;
 }
 
+/* Default (Desktop first) */
+.carousel-bg {
+  display: block;
+}
+
+.carousel-bg-mob {
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .carousel-bg {
+    display: none;
+  }
+
+  .carousel-bg-mob {
+    display: block;
+  }
+}
