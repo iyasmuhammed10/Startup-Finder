@@ -725,11 +725,107 @@
       </div>
     </div>
     <!--End Projects Section -->
+    
+    
+<section class="assist-section">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+  <h2 class="assist-title">Online <span>Approvals</span> Made Easy</h2>
+  <p class="text-muted">We handle approvals from all major UAE authorities quickly and efficiently — so your business stays compliant and operational.</p>
+</div>
+
+    <!-- Services -->
+    <div class="row g-4">
+
+      <!-- Column 1 -->
+     
+
+      <!-- Column 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+            <li><i class="bi bi-truck text-danger me-2"></i>Road Transport Authority (RTA)</li>
+
+<li><i class="bi bi-lightning-charge text-danger me-2"></i>Dubai Electricity and Water Authority (DEWA)</li>
+
+<li><i class="bi bi-building-gear text-danger me-2"></i>Dubai Municipality</li>
+
+<li><i class="bi bi-airplane text-danger me-2"></i>Dubai Civil Aviation Authority (DCAA)</li>
+
+<li><i class="bi bi-shield text-danger me-2"></i>Dubai Civil Defense (DCD)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+            <li><i class="bi bi-briefcase-fill text-danger me-2"></i>Dubai Economy Department (DED)</li>
+
+<li><i class="bi bi-house-door text-danger me-2"></i>Real Estate Regulatory Authority (RERA)</li>
+
+<li><i class="bi bi-graph-up-arrow text-danger me-2"></i>Dubai Export Development Corporation (DEDC)</li>
+
+<li><i class="bi bi-people-fill text-danger me-2"></i>Dubai Chamber of Commerce and Industry (DCCI)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="assist-card">
+          <ul>
+            <li><i class="bi bi-people text-danger me-2"></i>Ministry of Human Resources & Emiratisation (MOHRE)</li>
+
+<li><i class="bi bi-heart-pulse text-danger me-2"></i>Dubai Health Authority (DHA)</li>
+
+<li><i class="bi bi-mortarboard text-danger me-2"></i>Ministry of Education (MOE)</li>
+
+<li><i class="bi bi-book text-danger me-2"></i>Knowledge and Human Development Authority</li>
+
+<li><i class="bi bi-trophy text-danger me-2"></i>Dubai Sports Council (DSC)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 5 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="assist-card">
+          <ul>
+            <li><i class="bi bi-bank2 text-danger me-2"></i>Dubai Courts and Public Prosecutions</li>
+
+<li><i class="bi bi-scale text-danger me-2"></i>Ministry of Justice Services</li>
+
+<li><i class="bi bi-file-earmark-text text-danger me-2"></i>Diwan</li>
+          </ul>
+        </div>
+      </div>
+
+ <div class="col-md-6 col-lg-6">
+        <div class="assist-card">
+         <ul>
+           <li><i class="bi bi-broadcast text-danger me-2"></i>National Media Council (NMC)</li>
+
+<li><i class="bi bi-wifi text-danger me-2"></i>Telecommunication Regulatory Authority (TRA)</li>
+
+<li><i class="bi bi-megaphone text-danger me-2"></i>Government of Dubai Media</li>
+         </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    
     <!-- start project section h2 -->
     <section class="project-section-h2 visa-cards">
       <div class="auto-container">
         <div class="sec-title-h1 text-center">
-          <h6 class="sub-title wow fadeInUp">Recent project</h6>
+          <h6 class="sub-title wow fadeInUp">VISA</h6>
           <h2 class="title wow fadeInUp" data-wow-delay="400ms">Top UAE Visa Options for <br>Professionals & Investors
           </h2>
         </div>
@@ -1442,7 +1538,7 @@
     </p>
 
     <div class="freezone-logos">
-      <img src="images/government-logos/Firefly.jpg" alt="UAE Free Zone Logos" class="img-fluid">
+      <img class="col-lg-8" src="images/government-logos/Firefly.jpg" alt="UAE Free Zone Logos" class="img-fluid">
     </div>
 
   </div>
@@ -1690,6 +1786,24 @@ window.addEventListener("scroll", function() {
 });
 </script>
   
+  <script>
+const carousel = document.querySelector('#mainCarousel');
+let startX = 0;
+
+carousel.addEventListener('mousedown', (e) => {
+  startX = e.clientX;
+});
+
+carousel.addEventListener('mouseup', (e) => {
+  let endX = e.clientX;
+
+  if (startX > endX + 50) {
+    bootstrap.Carousel.getInstance(carousel).next();
+  } else if (startX < endX - 50) {
+    bootstrap.Carousel.getInstance(carousel).prev();
+  }
+});
+</script>
   
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 
